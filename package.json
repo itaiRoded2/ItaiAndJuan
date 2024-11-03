@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "migrate-db-data": "/Applications/MAMP/Library/bin/mysql80/bin/mysqldump -u root -proot --no-data locksmith_austin > data.sql && cp /Applications/MAMP/Library/bin/mysql80/bin/data.sql /Applications/MAMP/htdocs/db",
-    "migrate-db-schema": "/Applications/MAMP/Library/bin/mysql80/bin/mysqldump -u root -proot locksmith_austin > schema.sql && cp /Applications/MAMP/Library/bin/mysql80/bin/schema.sql /Applications/MAMP/htdocs/db",
+    "migrate-db-schema": "/Applications/MAMP/Library/bin/mysql80/bin/mysqldump -u root -proot --no-data locksmith_austin > schema.sql && cp /Applications/MAMP/Library/bin/mysql80/bin/schema.sql /Applications/MAMP/htdocs/db",
+    "migrate-db-data": "/Applications/MAMP/Library/bin/mysql80/bin/mysqldump -u root -proot locksmith_austin > data.sql && cp /Applications/MAMP/Library/bin/mysql80/bin/data.sql /Applications/MAMP/htdocs/db",
     "migrate-db": "npm run migrate-db-data && npm run migrate-db-schema"
   },
   "repository": {
