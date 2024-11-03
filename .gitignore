@@ -1,0 +1,17 @@
+db/auto.cnf
+db/binlog.index
+db/#ib_*
+db/binlog*
+db/ca-key.pem
+db/ca.pem
+db/client-cert.pem
+db/client-key.pem
+db/ib_buffer_pool
+db/ibdata1
+db/mysql_upgrade_info
+db/mysql.ibd
+db/private_key.pem
+db/public_key.pem
+db/server-cert.pem
+db/server-key.pem
+undo*
