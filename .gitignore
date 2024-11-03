@@ -14,3 +14,4 @@ db/private_key.pem
 db/public_key.pem
 db/server-cert.pem
 db/server-key.pem
+undo*
