@@ -5,7 +5,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "itai-migrate-db-schema": "C:/xampp/mysql/bin/mysqldump.exe -u root --no-data site1 > schema.sql && copy C:\\xampp\\htdocs\\site1\\wordpress\\schema.sql C:\\xampp\\htdocs\\site1\\wordpress\\db",
-    "itai-migrate-db-data": "C:/xampp/mysql/bin/mysqldump.exe -u root site1 > data.sql && copy C:\\xampp\\htdocs\\site1\\wordpress\\data.sql C:\\xampp\\htdocs\\site1\\wordpress\\db"
+    "itai-migrate-db-data": "C:/xampp/mysql/bin/mysqldump.exe -u root site1 > data.sql && copy C:\\xampp\\htdocs\\site1\\wordpress\\data.sql C:\\xampp\\htdocs\\site1\\wordpress\\db",
+    "migrate-db-schema": "/Applications/MAMP/Library/bin/mysql80/bin/mysqldump -u root -proot --no-data site1 > schema.sql && cp /Applications/MAMP/Library/bin/site1/bin/schema.sql /Applications/MAMP/htdocs/db",
+    "migrate-db-data": "/Applications/MAMP/Library/bin/mysql80/bin/mysqldump -u root -proot site1 > data.sql && cp /Applications/MAMP/Library/bin/mysql80/bin/data.sql /Applications/MAMP/htdocs/db",
+    "migrate-db": "npm run migrate-db-data && npm run migrate-db-schema"
   },
   "author": "",
   "license": "ISC",
