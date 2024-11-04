@@ -6,9 +6,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "itai-migrate-db-schema": "C:/xampp/mysql/bin/mysqldump.exe -u root --no-data site2 > schema.sql && copy C:\\xampp\\htdocs\\site2\\schema.sql C:\\xampp\\htdocs\\site2\\db",
     "itai-migrate-db-data": "C:/xampp/mysql/bin/mysqldump.exe -u root site2 > data.sql && copy C:\\xampp\\htdocs\\site2\\data.sql C:\\xampp\\htdocs\\site2\\db",
-    "migrate-db-schema": "/Applications/MAMP/Library/bin/mysql80/bin/mysqldump -u root -p --no-data site2 > schema.sql && cp /Applications/MAMP/Library/bin/mysql80/bin/schema.sql /Applications/MAMP/htdocs/db",
-    "migrate-db-data": "/Applications/MAMP/Library/bin/mysql80/bin/mysqldump -u root -p site2 > data.sql && cp /Applications/MAMP/Library/bin/mysql80/bin/data.sql /Applications/MAMP/htdocs/db",
-    "migrate-db": "npm run migrate-db-data && npm run migrate-db-schema"
+    "migrate-db-schema": "/Applications/MAMP/Library/bin/mysql80/bin/mysqldump -u root -p --no-data site2 > schema.sql && cp /Applications/MAMP/Library/bin/mysql80/bin/schema.sql /Applications/MAMP/htdocs/site2/db",
+    "migrate-db-data": "/Applications/MAMP/Library/bin/mysql80/bin/mysqldump -u root -p site2 > data.sql && cp /Applications/MAMP/Library/bin/mysql80/bin/data.sql /Applications/MAMP/htdocs/site2/db",
+    "migrate-db": "npm run migrate-db-data && npm run migrate-db-schema",
+    "juan-import-data-into-db": "mysql -u root -p site2 < //Applications/MAMP/htdocs/site2/db/data.sql",
+    "juan-import-schema-into-db": "mysql -u root -p site2 < //Applications/MAMP/htdocs/site2/db/schema.sql"
   },
   "author": "",
   "license": "ISC",

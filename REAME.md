@@ -24,3 +24,5 @@ And than will commit all and push
 
 After each "take" the code (on pull)
 FIRST THING THEY DO IS IMPORT THE DATA! (and schema)
+
+Add mysql to PATH
