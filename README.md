@@ -16,3 +16,8 @@ He will need to run an import using php admin tool (on http://localhost/phpmyadm
 And click site1 db (create if missing)
 than import the schema and data
  
+To repair DB try adding to wp-config.php
+define('WP_ALLOW_REPAIR', true);
+then remove after
+
+Visit http://yourdomain.com/wp-admin/maint/repair.php and follow the instructions. Remove this line from wp-config.php afterward.
