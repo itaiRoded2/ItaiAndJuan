@@ -106,7 +106,7 @@ CREATE TABLE `wp_options` (
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`),
   KEY `autoload` (`autoload`)
-) ENGINE=InnoDB AUTO_INCREMENT=170 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=212 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -124,7 +124,7 @@ CREATE TABLE `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -163,7 +163,7 @@ CREATE TABLE `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -253,7 +253,7 @@ CREATE TABLE `wp_usermeta` (
   PRIMARY KEY (`umeta_id`),
   KEY `user_id` (`user_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -280,6 +280,158 @@ CREATE TABLE `wp_users` (
   KEY `user_email` (`user_email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `wp_yoast_indexable`
+--
+
+DROP TABLE IF EXISTS `wp_yoast_indexable`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wp_yoast_indexable` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `permalink` longtext DEFAULT NULL,
+  `permalink_hash` varchar(40) DEFAULT NULL,
+  `object_id` bigint(20) DEFAULT NULL,
+  `object_type` varchar(32) NOT NULL,
+  `object_sub_type` varchar(32) DEFAULT NULL,
+  `author_id` bigint(20) DEFAULT NULL,
+  `post_parent` bigint(20) DEFAULT NULL,
+  `title` text DEFAULT NULL,
+  `description` mediumtext DEFAULT NULL,
+  `breadcrumb_title` text DEFAULT NULL,
+  `post_status` varchar(20) DEFAULT NULL,
+  `is_public` tinyint(1) DEFAULT NULL,
+  `is_protected` tinyint(1) DEFAULT 0,
+  `has_public_posts` tinyint(1) DEFAULT NULL,
+  `number_of_pages` int(11) unsigned DEFAULT NULL,
+  `canonical` longtext DEFAULT NULL,
+  `primary_focus_keyword` varchar(191) DEFAULT NULL,
+  `primary_focus_keyword_score` int(3) DEFAULT NULL,
+  `readability_score` int(3) DEFAULT NULL,
+  `is_cornerstone` tinyint(1) DEFAULT 0,
+  `is_robots_noindex` tinyint(1) DEFAULT 0,
+  `is_robots_nofollow` tinyint(1) DEFAULT 0,
+  `is_robots_noarchive` tinyint(1) DEFAULT 0,
+  `is_robots_noimageindex` tinyint(1) DEFAULT 0,
+  `is_robots_nosnippet` tinyint(1) DEFAULT 0,
+  `twitter_title` text DEFAULT NULL,
+  `twitter_image` longtext DEFAULT NULL,
+  `twitter_description` longtext DEFAULT NULL,
+  `twitter_image_id` varchar(191) DEFAULT NULL,
+  `twitter_image_source` text DEFAULT NULL,
+  `open_graph_title` text DEFAULT NULL,
+  `open_graph_description` longtext DEFAULT NULL,
+  `open_graph_image` longtext DEFAULT NULL,
+  `open_graph_image_id` varchar(191) DEFAULT NULL,
+  `open_graph_image_source` text DEFAULT NULL,
+  `open_graph_image_meta` mediumtext DEFAULT NULL,
+  `link_count` int(11) DEFAULT NULL,
+  `incoming_link_count` int(11) DEFAULT NULL,
+  `prominent_words_version` int(11) unsigned DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `blog_id` bigint(20) NOT NULL DEFAULT 1,
+  `language` varchar(32) DEFAULT NULL,
+  `region` varchar(32) DEFAULT NULL,
+  `schema_page_type` varchar(64) DEFAULT NULL,
+  `schema_article_type` varchar(64) DEFAULT NULL,
+  `has_ancestors` tinyint(1) DEFAULT 0,
+  `estimated_reading_time_minutes` int(11) DEFAULT NULL,
+  `version` int(11) DEFAULT 1,
+  `object_last_modified` datetime DEFAULT NULL,
+  `object_published_at` datetime DEFAULT NULL,
+  `inclusive_language_score` int(3) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `object_type_and_sub_type` (`object_type`,`object_sub_type`),
+  KEY `object_id_and_type` (`object_id`,`object_type`),
+  KEY `permalink_hash_and_object_type` (`permalink_hash`,`object_type`),
+  KEY `subpages` (`post_parent`,`object_type`,`post_status`,`object_id`),
+  KEY `prominent_words` (`prominent_words_version`,`object_type`,`object_sub_type`,`post_status`),
+  KEY `published_sitemap_index` (`object_published_at`,`is_robots_noindex`,`object_type`,`object_sub_type`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `wp_yoast_indexable_hierarchy`
+--
+
+DROP TABLE IF EXISTS `wp_yoast_indexable_hierarchy`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wp_yoast_indexable_hierarchy` (
+  `indexable_id` int(11) unsigned NOT NULL,
+  `ancestor_id` int(11) unsigned NOT NULL,
+  `depth` int(11) unsigned DEFAULT NULL,
+  `blog_id` bigint(20) NOT NULL DEFAULT 1,
+  PRIMARY KEY (`indexable_id`,`ancestor_id`),
+  KEY `indexable_id` (`indexable_id`),
+  KEY `ancestor_id` (`ancestor_id`),
+  KEY `depth` (`depth`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `wp_yoast_migrations`
+--
+
+DROP TABLE IF EXISTS `wp_yoast_migrations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wp_yoast_migrations` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `version` varchar(191) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `wp_yoast_migrations_version` (`version`)
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `wp_yoast_primary_term`
+--
+
+DROP TABLE IF EXISTS `wp_yoast_primary_term`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wp_yoast_primary_term` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `post_id` bigint(20) DEFAULT NULL,
+  `term_id` bigint(20) DEFAULT NULL,
+  `taxonomy` varchar(32) NOT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `blog_id` bigint(20) NOT NULL DEFAULT 1,
+  PRIMARY KEY (`id`),
+  KEY `post_taxonomy` (`post_id`,`taxonomy`),
+  KEY `post_term` (`post_id`,`term_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `wp_yoast_seo_links`
+--
+
+DROP TABLE IF EXISTS `wp_yoast_seo_links`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wp_yoast_seo_links` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `url` varchar(255) DEFAULT NULL,
+  `post_id` bigint(20) unsigned DEFAULT NULL,
+  `target_post_id` bigint(20) unsigned DEFAULT NULL,
+  `type` varchar(8) DEFAULT NULL,
+  `indexable_id` int(11) unsigned DEFAULT NULL,
+  `target_indexable_id` int(11) unsigned DEFAULT NULL,
+  `height` int(11) unsigned DEFAULT NULL,
+  `width` int(11) unsigned DEFAULT NULL,
+  `size` int(11) unsigned DEFAULT NULL,
+  `language` varchar(32) DEFAULT NULL,
+  `region` varchar(32) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `link_direction` (`post_id`,`type`),
+  KEY `indexable_link_direction` (`indexable_id`,`type`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -290,4 +442,4 @@ CREATE TABLE `wp_users` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-03 20:52:45
+-- Dump completed on 2024-11-03 21:23:36

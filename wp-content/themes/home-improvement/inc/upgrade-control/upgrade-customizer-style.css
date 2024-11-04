@@ -1,0 +1,207 @@
+#customize-theme-controls #accordion-section-home_service_upgrade,
+#customize-theme-controls #accordion-section-home_service_header_pro_features_notices,
+#customize-theme-controls #accordion-section-home_service_appearance_pro_features_notices,
+#customize-theme-controls #accordion-section-home_service_blog_pro_features_notices,
+#customize-theme-controls #accordion-section-home_service_frontpage_pro_features_notices,
+#customize-theme-controls #accordion-section-home_service_mobile_optiimization_pro_features_notices {
+    display: block !important;
+}
+
+#customize-theme-controls #accordion-section-home_service_upgrade h3.accordion-section-title {
+    background: #05398e;
+    color: #fff;
+    padding: 10px 20px 12px;
+    border: 0;
+    font-size: 18px;
+}
+
+#customize-theme-controls #accordion-section-home_service_upgrade a.button.button-primary.alignright {
+
+    background: #faaa29;
+    border-color: #faaa29;
+}
+
+#customize-theme-controls #accordion-section-home_service_upgrade a.button.button-primary.alignright:hover {
+    background: #22a696;
+    border-color: #22a696;
+}
+
+li#accordion-section-home_service_header_pro_features_notices h3.accordion-section-title,
+li#accordion-section-home_service_header_pro_features_notices h3.accordion-section-title:hover,
+#accordion-section-home_service_appearance_pro_features_notices h3.accordion-section-title,
+#accordion-section-home_service_appearance_pro_features_notices h3.accordion-section-title:hover,
+#accordion-section-home_service_blog_pro_features_notices h3.accordion-section-title,
+#accordion-section-home_service_blog_pro_features_notices h3.accordion-section-title:hover,
+#accordion-section-home_service_frontpage_pro_features_notices h3.accordion-section-title,
+#accordion-section-home_service_frontpage_pro_features_notices h3.accordion-section-title:hover {
+    background: transparent !important;
+    border: 0;
+}
+
+li#accordion-section-home_service_header_pro_features_notices h3,
+li#accordion-section-home_service_appearance_pro_features_notices h3,
+li#accordion-section-home_service_blog_pro_features_notices h3,
+#accordion-section-home_service_frontpage_pro_features_notices h3 {
+    font-size: 20px;
+    line-height: 29px;
+    margin-bottom: 6px;
+    margin-top: 20px;
+}
+
+ul.upsell-features {
+    margin: 0;
+    list-style: none;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    padding: 0 0 0 15px;
+}
+
+span.home-improvement-upgrade-pro {
+    position: relative;
+}
+
+/*Custom setting style*/
+.customize-control-home-service-custom-text h3.customize-text_editor {
+    font-size: 20px !important;
+    margin-bottom: -5px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #50575E;
+    margin-top: 4px;
+    position: relative;
+}
+
+.customize-control-home-service-custom-text ul.upsell-features {
+    font-size: 14px;
+    margin: 0;
+    list-style: none;
+}
+
+span.home-improvement-upgrade-pro a.button {
+    background: #f6c105;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 16px !important;
+    border: 0;
+    transition: all ease 0.23s;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    color: #1D2327;
+    padding: 5px 10px 5px !important;
+    border-radius: 5px;
+}
+
+span.home-improvement-upgrade-pro a.button:hover {
+    background: #05398e;
+    color: #fff;
+}
+
+li#accordion-section-home_service_frontpage_pro_features_notices span.home-improvement-upgrade-pro a.button,
+li#accordion-section-home_service_blog_pro_features_notices span.home-improvement-upgrade-pro a.button,
+li#accordion-section-home_service_header_pro_features_notices span.home-improvement-upgrade-pro a.button,
+li#accordion-section-home_service_appearance_pro_features_notices span.home-improvement-upgrade-pro a.button {
+    margin-left: 15px;
+    width: 91%;
+}
+
+li#customize-control-site_info_upsell_message_setting,
+li#customize-control-home_service_mobile_optiimization_pro_features_notices,
+li#customize-control-footer_color_upsell_message_setting {
+    background: #fff;
+    border-radius: 4px;
+    padding: 10px 5% 23px;
+    width: 90%;
+}
+
+li#customize-control-home_service_mobile_optiimization_pro_features_notices ul.upsell-features {
+    padding: 0;
+}
+
+.customize-control-home-service-custom-text ul.upsell-features li,
+ul.upsell-features li {
+    position: relative;
+    font-weight: 400;
+    padding-left: 22px;
+    margin: 0 0 15px;
+}
+
+.customize-control-home-service-custom-text ul.upsell-features li:before,
+ul.upsell-features li:before {
+    content: '';
+    left: 0;
+    top: 3px;
+    width: 13px;
+    height: 13px;
+    background: url(tick-mark.png);
+    position: absolute;
+}
+
+li#accordion-section-home_service_appearance_pro_features_notices,
+li#customize-control-header_layout_upsell_message_setting {
+    position: relative;
+    padding: 0 9px 23px;
+}
+
+li#accordion-section-home_service_appearance_pro_features_notices:before,
+li#customize-control-header_layout_upsell_message_setting:before {
+    content: '';
+    width: 94%;
+    margin: 0 3%;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 5px;
+}
+
+li#customize-control-header_layout_upsell_message_setting {
+    padding: 0;
+}
+
+li#customize-control-header_layout_upsell_message_setting:before {
+    padding: 0;
+    width: 100%;
+    margin: 0;
+}
+
+li#customize-control-header_layout_upsell_message_setting label h3.customize-text_editor {
+    padding: 10px 12px 0;
+}
+
+li#customize-control-header_layout_upsell_message_setting span.home-improvement-upgrade-pro a.button {
+    width: 92%;
+    margin: 0 4% 20px;
+}
+
+li#accordion-section-home_service_header_pro_features_notices,
+li#accordion-section-home_service_frontpage_pro_features_notices,
+li#accordion-section-home_service_blog_pro_features_notices,
+ul#sub-accordion-section-home_services_customize_register_footer_options_section,
+li#customize-control-footer_layout_upsell_message_setting,
+li#customize-control-blog_layout_upsell_message_setting {
+    background: #fff;
+    margin: 0 3%;
+    padding: 0 0 20px;
+    border-radius: 3px;
+}
+
+li#customize-control-footer_layout_upsell_message_setting {
+    margin: 0;
+    padding: 15px 15px 20px;
+    width: 91%;
+}
+
+li#customize-control-blog_layout_upsell_message_setting {
+    margin: 0;
+    padding: 20px 5%;
+    width: 90%;
+}
+
+li#customize-control-blog_layout_upsell_message_setting ul.upsell-features,
+li#customize-control-footer_layout_upsell_message_setting ul.upsell-features {
+    padding-left: 0;
+}
