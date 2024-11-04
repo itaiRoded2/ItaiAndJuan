@@ -1,0 +1,13 @@
+{
+  "name": "site2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "itai-migrate-db-schema": "C:/xampp/mysql/bin/mysqldump.exe -u root --no-data site2 > schema.sql && copy C:\\xampp\\htdocs\\site2\\wordpress\\schema.sql C:\\xampp\\htdocs\\site2\\wordpress\\db",
+    "itai-migrate-db-data": "C:/xampp/mysql/bin/mysqldump.exe -u root site2 > data.sql && copy C:\\xampp\\htdocs\\site2\\wordpress\\data.sql C:\\xampp\\htdocs\\site2\\wordpress\\db"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
