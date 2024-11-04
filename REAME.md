@@ -7,3 +7,20 @@ WHen JUAN takes get latest HE NEEDS to EXPORT the data and scheme from the the d
 To repair DB try adding to wp-config.php define('WP_ALLOW_REPAIR', true); then remove after
 
 Visit http://yourdomain.com/wp-admin/maint/repair.php and follow the instructions. Remove this line from wp-config.php afterward.
+
+
+# When Itai or Juan finish work
+They each do
+
+Itai will run
+npm run itai-migrate-db-schema
+npm run itai-migrate-db-data
+
+Juan will run 
+npm run migrate-db-schema
+npm run migrate-db-data
+
+And than will commit all and push
+
+After each "take" the code (on pull)
+FIRST THING THEY DO IS IMPORT THE DATA! (and schema)
