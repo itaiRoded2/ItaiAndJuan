@@ -12,6 +12,7 @@
     "migrate-db": "npm run migrate-db-data && npm run migrate-db-schema",
     "juan-import-data-into-db": "mysql -u root -p site2 < //Applications/MAMP/htdocs/site2/db/data.sql",
     "juan-import-schema-into-db": "mysql -u root -p site2 < //Applications/MAMP/htdocs/site2/db/schema.sql",
+    "juan-import-db": "npm run juan-import-data-into-db && npm run juan-import-schema-into-db",
     "itai-import-data-into-db": "mysql -u root -p site2 < C:\\xampp\\htdocs\\site2\\db\\data.sql",
     "itai-import-schema-into-db": "mysql -u root -p site2 < C:\\xampp\\htdocs\\site2\\db\\schema.sql"
   },
