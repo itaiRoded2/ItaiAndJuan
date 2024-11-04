@@ -10,7 +10,9 @@
     "migrate-db-data": "/Applications/MAMP/Library/bin/mysql80/bin/mysqldump -u root -p site2 > data.sql && cp /Applications/MAMP/Library/bin/mysql80/bin/data.sql /Applications/MAMP/htdocs/site2/db",
     "migrate-db": "npm run migrate-db-data && npm run migrate-db-schema",
     "juan-import-data-into-db": "mysql -u root -p site2 < //Applications/MAMP/htdocs/site2/db/data.sql",
-    "juan-import-schema-into-db": "mysql -u root -p site2 < //Applications/MAMP/htdocs/site2/db/schema.sql"
+    "juan-import-schema-into-db": "mysql -u root -p site2 < //Applications/MAMP/htdocs/site2/db/schema.sql",
+    "itai-import-data-into-db": "mysql -u root -p site2 < C:\\xampp\\htdocs\\site2\\db\\data.sql",
+    "itai-import-schema-into-db": "mysql -u root -p site2 < C:\\xampp\\htdocs\\site2\\db\\schema.sql"
   },
   "author": "",
   "license": "ISC",
