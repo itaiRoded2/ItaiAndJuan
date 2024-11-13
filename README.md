@@ -39,3 +39,26 @@ Than go here:
 http://localhost/site2/
 http://localhost/site2/wp-admin/
 http://localhost/phpmyadmin/
+
+## Juan how to run?
+
+git pull
+make sure MAMP is on for both
+npm run juan-import-db
+password is empty for both
+
+Than go here:
+http://localhost/site2/
+http://localhost/site2/wp-admin/
+http://localhost/phpmyadmin/
+
+## Juan how to save changes?
+
+After updating something in db
+
+run the following:
+
+npm run juan-migrate-db
+password: empty
+
+commit and push
