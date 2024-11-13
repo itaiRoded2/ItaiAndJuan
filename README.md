@@ -40,6 +40,16 @@ http://localhost/site2/
 http://localhost/site2/wp-admin/
 http://localhost/phpmyadmin/
 
+## Itai how to save changes?
+
+After updating something in db
+
+run the following:
+
+npm run itai-migrate-db-schema npm run itai-migrate-db-data
+
+commit and push
+
 ## Juan how to run?
 
 git pull
