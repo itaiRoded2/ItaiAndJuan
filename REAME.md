@@ -1,28 +1,29 @@
-When Itai is on Site 1 and make db changes Those are saved in HIS LOCAL XAMPP sql server to "save them" Itai needs to run the scripts //TO SAVE npm run itai-migrate-db-schema npm run itai-migrate-db-data
+# Database Management Instructions
 
-This will SAVE the scheme and DATA
+## For Itai
 
-WHen JUAN takes get latest HE NEEDS to EXPORT the data and scheme from the the db folder to HIS MAMP because our sites read from our local DBS! He will need to run an import using php admin tool (on http://localhost/phpmyadmin/) (for him http://localhost:8888/phpmyadmin/) And click site1 db (create if missing) than import the schema and data
+Here is the improved version of the text for better readability on GitHub:
 
-To repair DB try adding to wp-config.php define('WP_ALLOW_REPAIR', true); then remove after
+This will save the schema and data.
 
-Visit http://yourdomain.com/wp-admin/maint/repair.php and follow the instructions. Remove this line from wp-config.php afterward.
+For Juan
+When Juan takes the latest changes, he needs to export the data and schema from the db folder to his MAMP because our sites read from our local databases. He will need to run an import using the phpMyAdmin tool (on http://localhost/phpmyadmin/ or http://localhost:8888/phpmyadmin/ for him). Click on the site1 database (create if missing) and then import the schema and data.
 
+Repairing the Database
+To repair the database, add the following line to wp-config.php:
 
-# When Itai or Juan finish work
-They each do
+Then visit http://yourdomain.com/wp-admin/maint/repair.php and follow the instructions. Remove this line from wp-config.php afterward.
 
-Itai will run
-npm run itai-migrate-db-schema
-npm run itai-migrate-db-data
+Workflow
+When Itai or Juan Finish Work
+They each do the following:
 
-Juan will run 
-npm run migrate-db-schema
-npm run migrate-db-data
+Itai
+Juan
+And then commit all changes and push.
 
-And than will commit all and push
+After Each Pull
+The first thing they do is import the data and schema.
 
-After each "take" the code (on pull)
-FIRST THING THEY DO IS IMPORT THE DATA! (and schema)
-
-Add mysql to PATH
+Additional Notes
+Add MySQL to PATH.
