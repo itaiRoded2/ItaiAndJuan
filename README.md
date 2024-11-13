@@ -28,4 +28,14 @@ The first thing they do is import the data and schema.
 Additional Notes
 Add MySQL to PATH.
 
-test!!!! test test!
+## Itai how to run?
+
+git pull
+make sure xmapp is on for both
+npm run itai-import-db
+password is empty for both
+
+Than go here:
+http://localhost/site2/
+http://localhost/site2/wp-admin/
+http://localhost/phpmyadmin/
